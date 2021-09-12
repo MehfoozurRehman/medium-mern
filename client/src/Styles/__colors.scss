@@ -1,0 +1,14 @@
+$secondary: #c5c5ff;
+html {
+  --primary: #242424;
+  --white: #ffffff;
+  --hover: black;
+  --border: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="dark"] {
+  --primary: #ffffff;
+  --white: #242424;
+  --hover: #f3f3f3;
+  --border: rgba(255, 255, 255, 0.3);
+}

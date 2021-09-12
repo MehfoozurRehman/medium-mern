@@ -1,0 +1,285 @@
+@import "./_global";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+}
+.brand__name {
+  color: var(--primary);
+}
+.brand__name .brand__name__logo {
+  width: 200px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__nav__link {
+  font-size: $normal-font-size;
+  color: var(--primary);
+  padding: 0.5em;
+}
+.header__nav__link:hover {
+  color: var(--hover);
+}
+.header__nav__btn {
+  padding: 0.5em 1em;
+  margin-left: 0.5em;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: $normal-font-size - 1px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.header__nav__btn:hover {
+  background-color: var(--hover);
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 55px;
+  height: 30px;
+  background: var(--primary);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+}
+
+input:checked + label {
+  background: $secondary;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  background-color: #242424;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms !important;
+  transition-delay: 0 !important;
+}
+.icon__btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: var(--primary);
+  margin-right: 1em;
+  cursor: pointer;
+}
+.icon__btn:hover {
+  background-color: var(--hover);
+  color: var(--white);
+}
+.icon__btn__badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.user__avatar__btn {
+  padding: 0em;
+  border-radius: 50px;
+  border: none;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  margin: 0em 1em;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+.user__avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.context__wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  left: 0px;
+  display: flex;
+  justify-content: flex-end;
+  top: 0px;
+  border: none;
+  padding: 0em;
+}
+.user__context__menu {
+  background-color: var(--white);
+  margin-right: 10px;
+  margin-top: 100px;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  z-index: 1000;
+}
+.user__context__menu__header {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1em;
+}
+.user__context__menu__header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.user__context__menu__header__user__name {
+  font-size: $normal-font-size;
+  color: var(--primary);
+}
+.user__context__menu__header__user__email {
+  font-size: $normal-font-size - 2px;
+  color: var(--primary);
+}
+.user__context__menu__section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.user__context__menu__section .header__nav__link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.user__context__menu__section .header__nav__link:hover {
+  background-color: var(--border);
+}
+.seach__form__input {
+  width: 200px;
+  height: 30px;
+  padding: 0em 0.5em;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--primary);
+  color: var(--primary);
+}
+.seach__form__input:hover,
+.seach__form__input:focus {
+  border-color: var(--hover);
+}
+.notification__context__menu {
+  background-color: var(--white);
+  margin-right: 40px;
+  margin-top: 100px;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 1.5em;
+  z-index: 1000;
+  width: 300px;
+}
+.notification__context__menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.notification__context__menu__heading {
+  font-size: $heading-font-size;
+  color: var(--primary);
+}
+.notification__context__menu__btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--primary);
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  padding: 0em;
+}
+.notification__context__menu__btn:hover {
+  border-color: var(--hover);
+}
+.notification__context__menu__section__entry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.notification__context__menu__section__entry:hover {
+  background-color: var(--border);
+}
+.notification__context__menu__section__entry:last-child {
+  margin-bottom: 0em;
+}
+.notification__context__menu__section__entry__heading {
+  font-size: $normal-font-size - 1px;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.3em;
+}
+.notification__context__menu__section__entry__content {
+  font-size: $normal-font-size - 2px;
+  text-align: left;
+  color: var(--primary);
+}

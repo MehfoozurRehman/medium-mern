@@ -1,0 +1,23 @@
+@import "./_colors";
+@import "./_variable";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: cursive, sans-serif;
+  background-color: var(--white);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+a,
+button {
+  transition: 100ms ease-in-out;
+  -webkit-transition: 100ms ease-in-out;
+  -moz-transition: 100ms ease-in-out;
+  -ms-transition: 100ms ease-in-out;
+  -o-transition: 100ms ease-in-out;
+}
